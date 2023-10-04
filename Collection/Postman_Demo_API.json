@@ -304,15 +304,16 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "7a8d8a90-2f48-4b9c-ac5f-d2cd94d7d10b",
 								"exec": [
 									"pm.test(\"Returns 7 char alphanumeric id\", function () {",
-									"    let jsonData = pm.response.json();",
-									"    pm.expect(jsonData.form.someHash).to.match(/^[a-z0-9]{7}$/);",
+									"    let json = pm.response.json();",
+									"    pm.expect(json.form.someHash).to.match(/^[a-z0-9]{7}$/);",
 									"});",
 									"",
 									"pm.test(\"Returns 15 char alhpanumeric id\", function () {",
-									"    let jsonData = pm.response.json();",
-									"    pm.expect(jsonData.form.secondHash).to.match(/^[a-z0-9]{15}$/);",
+									"    let json = pm.response.json();",
+									"    pm.expect(json.form.secondHash).to.match(/^[a-z0-9]{15}$/);",
 									"});",
 									""
 								],
@@ -321,6 +322,9 @@
 						}
 					],
 					"id": "a2e079a6-b87b-4424-a791-8edfc72f8a9e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "POST",
 						"header": [],
