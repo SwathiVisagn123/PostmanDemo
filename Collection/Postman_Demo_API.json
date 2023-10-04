@@ -312,8 +312,8 @@
 									"});",
 									"",
 									"pm.test(\"Returns 15 char alhpanumeric id\", function () {",
-									"    let json = pm.response.json();",
-									"    pm.expect(json.form.secondHash).to.match(/^[a-z0-9]{15}$/);",
+									"    let jsonData = pm.response.json();",
+									"    pm.expect(jsonData.form.secondHash).to.match(/^[a-z0-9]{15}$/);",
 									"});",
 									""
 								],
