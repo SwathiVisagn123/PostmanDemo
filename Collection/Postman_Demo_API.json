@@ -218,8 +218,10 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "3914748a-7d24-463b-ad35-8319f363f384",
 								"exec": [
 									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
 									"    pm.response.to.have.header(\"Content-Type\");",
 									"});",
 									"",
@@ -232,6 +234,9 @@
 						}
 					],
 					"id": "5e7b8911-2d5a-4353-8b99-ef2a3c070873",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "PATCH",
 						"header": [],
